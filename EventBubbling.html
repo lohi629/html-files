@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>event bubbling</title>
+<style>
+#parent{
+color:red;
+}
+</style>
+</head>
+<body>
+<div id="parent" >this is parent
+<div id="child" >This is child</div>
+</div>
+<script>
+document.getElementById("parent").addEventListener("click",function a(){
+                                                              alert("hiii");
+
+                                                                      })
+document.getElementById("child").addEventListener("click",function b(){
+                                                              alert("hello");
+event.cancelBubble=true;
+
+
+                                                                      })
+</script>
+ 
+</body>
+</html>
