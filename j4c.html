@@ -1,0 +1,61 @@
+<html>
+<head>
+<script>
+function add_mat(r,c,m,n)
+{
+res=[[0 for(i=0;i<c;i++)]for(j=0;j<r;j++)]
+for(var i=0;i<r;i++)
+{
+for(var j=0;j<c;j++)
+{
+res[i][j]=m[i][j]+n[i][j];
+}
+}
+return res
+}
+function mul_mat(r1,r2,c1,c2,m,n)
+{
+res=[[0 for(i=0;i<r1;i++)]for(j=0;j<c2;j++)]
+for(i=0;i<r1;i++)
+{
+for(j=0;j<c2[0];j++)
+{
+for(k=0;k<c2;k++)
+{
+res[i][j]=res[i][j]+(m[i][k]*n[k][j])
+}
+}
+}
+return res
+}
+</script>
+</head>
+<body>
+<script>
+var r=parseInt(window.prompt("enter first add mat row size"))
+var c=parseInt(window.prompt("enter second add mat col size"))
+var r1=parseInt(window.prompt("enter first mat row size"))
+var r2=parseInt(window.prompt("enter second mat row size"))
+var c1=parseInt(window.prompt("enter first mat col size"))
+var c2=parseInt(window.prompt("enter second mat col size"))
+var m=new Array(
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+m[i][j]=parseInt(prompt("enter ele of"+(i+1)+"element"))
+}
+}
+/*var q=[[parseInt(prompt("enter ele of second add mat")) for(i=0;i<c;i++)]for(j=0;j<r1;j++)]
+var m=[[parseInt(prompt("enter ele of first mul mat")) for(i=0;i<c1;i++)]for(j=0;j<r1;j++)]
+var n=[[parseInt(prompt("enter ele of first  mat")) for(i=0;i<c2;i++)]for(j=0;j<r2;j++)]
+document.write(add_mat(r,c,p,q))  
+document.write(mul_mat(r1,r2,c1,c2,m,n))*/
+</script>
+</body>
+</html>
+
+
+
+
+
