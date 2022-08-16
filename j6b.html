@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Children collection</title>
+</head>
+<body>
+<script>
+function mylist()
+{
+var list=document.getElementById("mylist");
+if(list.children)
+{
+for(var i=0;i<list.children.length;i++)
+{
+var child=list.children[i];
+alert("The "+i+" list item is : "+child.innerHTML);
+}
+}
+else
+{
+for(var i=0;i<list.childNodes.length;i++)
+{
+var child=list.childNodes[i];
+if(child.nodeType==1)
+{
+alert("The "+i+" list item is : "+child.innerHTML);
+}
+}
+}
+}
+</script>
+<button onclick="mylist()">Get the list items..!</button>
+<ol id="mylist">
+<li>India</li>
+<li>Japan</li>
+<li>Russia</li>
+</ol>
+</body>
+</html>
+ 
+ 
+ 

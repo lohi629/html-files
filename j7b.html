@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script>
+     function over()
+      {
+        document.getElementById('key').innerHTML=
+"Onmouseover event has occurred";
+      }
+      function out()
+      {
+        document.getElementById('key').innerHTML=
+"Onmouseout event has occurred";
+      }
+ function up()
+       {
+         document.getElementById("key").innerHTML="Onmouseup event has occured";
+       }
+      function down()
+       {
+         document.getElementById("key").innerHTML = "Onmousedown event has occured";
+       }
+    </script>
+  </head>
+  <body bgcolor="cyan">
+    <h2 id="key" onmouseover="over()"
+                 onmouseout="out()"
+                  onmouseup="up()"
+                  onmousedown="down()">
+       Original Text</h2>
+  </body>
+</html>

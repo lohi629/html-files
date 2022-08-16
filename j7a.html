@@ -1,0 +1,29 @@
+<html>
+<body>
+
+Enter your name: <input type="text" id="fname" onfocus="focusFunction()" onblur="myFunction()">
+<select id="mySelect" onchange="Function()">
+  <option value="Audi">Audi</option>
+  <option value="BMW">BMW</option>
+  <option value="Mercedes">Mercedes</option>
+  <option value="Volvo">Volvo</option>
+</select>
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+<p id="demo"></p>
+<script>
+function focusFunction() {
+  document.getElementById("fname").style.background = "yellow";
+}
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+document.getElementById("fname").style.background = "red";
+}
+function Function() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>All collections</title>
+</head>
+<body>
+<script>
+function mytab()
+{
+if(document.all)
+{
+var tab=document.all.namedItem("mytable");
+}
+else
+{
+var tab=document.getElementById("mytable");
+}
+alert(tab.innerHTML);
+}
+</script>
+<button onclick="mytab()">Get the innerHTML of the table...!</button>
+<br><br>
+<table id="mytable" border="1px">
+<tbody>
+<tr>
+<td>First row</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+</html>
